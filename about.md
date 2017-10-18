@@ -1,15 +1,16 @@
 ---
 layout: page
-title: About
+title: Acerca de
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+Médico veterinario. 
 
 ### More Information
 
 A place to include any other types of information that you'd like to include about yourself.
 
-### Contact me
+### Contacto
 
-[email@domain.com](mailto:email@domain.com)
+[luisandresgonzalez@gmail.com](mailto:luisandresgonzalez@gmail.com)
