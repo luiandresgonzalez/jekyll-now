@@ -1,5 +1,6 @@
 ---
 published: true
+title: Hola 2
 ---
 ## A New Post
 
