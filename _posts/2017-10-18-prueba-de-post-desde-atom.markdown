@@ -11,3 +11,5 @@ desde las mismas configuraciones de Atom.
 
 Luego, para crear un nuevo post basta ir en Packages > jekyll > New Post.
 Este genera todas las herramientas para crear un post nuevo, incluyendo el header en yaml.
+
+Final.
