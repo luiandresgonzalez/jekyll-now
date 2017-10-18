@@ -1,7 +1,7 @@
 ---
 published: true
-title: Los arboles mueren de pie
+title: Acerca de este blog
 ---
-## A New Post
+Este blog tratará de diversos temas. Por el momento es un sitio de prueba. Con el tiempo se irá poblando de posts. 
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+La prueba de concepto de este blog gira en torno del lenguaje de marcas [Markdown](http://daringfireball.net/projects/markdown/).
