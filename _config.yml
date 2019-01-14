@@ -92,3 +92,4 @@ exclude:
   - CNAME
 
 theme: jekyll-theme-cayman
+remote_theme: jekyll-theme-cayman
