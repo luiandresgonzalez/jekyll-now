@@ -358,4 +358,4 @@ Lo que hace la función gather es recolectar los valores dentro de una tabla de 
 -   El nombre que le vamos a dar al contenido de adentro de la tabla de doble entrada (el **valor** de la dupla llave/valor).
 -   Las columnas que vamos a omitir porque queremos que permanezcan tal como están.
 
-![Representación gráfica de como `gather` funciona](gather_ejemplo.png)
+![Representación gráfica de como `gather` funciona](/images/gather_ejemplo.png)
