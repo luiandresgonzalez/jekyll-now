@@ -116,6 +116,7 @@ pew
 
 ``` r
 str(pew)
+
 ```
 
     ## Classes 'tbl_df', 'tbl' and 'data.frame':    18 obs. of  11 variables:
