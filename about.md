@@ -5,11 +5,11 @@ permalink: /about/
 published: true
 ---
 
-Médico veterinario. 
+Médico veterinario.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Para mayor información acerca mío consultar los links a redes sociales y plataformas en los íconos aquí abajo. 
 
 ### Contacto
 
