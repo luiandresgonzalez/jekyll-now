@@ -1,7 +1,7 @@
 ---
 published: true
 title: Acerca de este blog
-tags: cortos basico
+
 ---
 Este blog tratará de diversos temas. Por el momento es un sitio de prueba. Con el tiempo se irá poblando de posts.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Prueba de post desde atom"
 date: "2017-10-18 15:09:40 -0200"
-tags: cortos basico
+
 comments: true
 ---
 
