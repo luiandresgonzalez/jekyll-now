@@ -1,10 +1,29 @@
----
-layout: post
-title: "Juror staking distribution in Kleros Humanity Court"
-date: "2021-06-03 14:33:38 -0600"
+    ## Warning: package 'ghql' was built under R version 4.0.5
 
-comments: true
----
+    ## Warning: package 'jsonlite' was built under R version 4.0.5
+
+    ## Warning: package 'dplyr' was built under R version 4.0.5
+
+    ## Registered S3 methods overwritten by 'tibble':
+    ##   method     from  
+    ##   format.tbl pillar
+    ##   print.tbl  pillar
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+    ## Warning: package 'ggplot2' was built under R version 4.0.5
+
+    ## Warning: package 'ineq' was built under R version 4.0.3
+
 Introduction
 ============
 
@@ -15,7 +34,7 @@ Establishing connection with the subgraph, acquiring data
 
     con <- GraphqlClient$new(
       url = "https://api.thegraph.com/subgraphs/name/shenwilly/kleros-liquid"
-
+      
     )
 
 Getting data using GraphQL queries. Limit is 1000 items so 2 queries
@@ -35,7 +54,7 @@ needed to be done, then merged.
                     stakedToken
                   }
                 stakedToken
-
+                
                 subCourts {
                   id
                 }
@@ -62,7 +81,7 @@ needed to be done, then merged.
                     stakedToken
                   }
                 stakedToken
-
+                
                 subCourts {
                   id
                 }
@@ -75,7 +94,7 @@ needed to be done, then merged.
 
 And now we merge both data frames into one
 
-    # Merging both data frames
+    # Merging both data frames 
 
     merged <- rbind(raw_data,raw_data2)
 
@@ -85,7 +104,7 @@ Now some databased pruning mostly with the `tidyverse` tools
 
     # Unnesting the jurorStakes column, which is a list
 
-    unnested <- merged %>% unnest(jurorStakes, names_repair = "universal")
+    unnested <- merged %>% unnest(jurorStakes, names_repair = "universal") 
 
     ## New names:
     ## * id -> id...1
@@ -107,7 +126,7 @@ categories
     bin_freq <- filtrado %>%
       select(tokenNumeric) %>%
       group_by(bin_stake = cut_width(tokenNumeric, width = 500000, boundary = 0, dig.lab = 12)) %>%
-      summarise(n_Wallets = n(), pnk_sum = sum(tokenNumeric))
+      summarise(n_Wallets = n(), pnk_sum = sum(tokenNumeric)) 
 
 This generates the following table:
 
@@ -119,8 +138,8 @@ This generates the following table:
     ## 1 [0,500000]              182 12315344.
     ## 2 (500000,1000000]          8  6025527.
     ## 3 (1000000,1500000]         5  5768413.
-    ## 4 (2000000,2500000]         1  2494000
-    ## 5 (3000000,3500000]         1  3225000
+    ## 4 (2000000,2500000]         1  2494000 
+    ## 5 (3000000,3500000]         1  3225000 
     ## 6 (5000000,5500000]         1  5117346
 
 And for the plot, using the R package `ggplot2`:
@@ -134,9 +153,9 @@ And for the plot, using the R package `ggplot2`:
     bp <- ggplot(count.data, aes(x="", y=pnk_sum, fill=bin_stake))+ geom_bar(width = 1, stat = "identity")
 
     # Creating the pie chart
-    bp + coord_polar("y", start=0) +
+    bp + coord_polar("y", start=0) + 
       scale_fill_brewer(palette = "YlOrRd") +
-      theme_minimal() +
+      theme_minimal() + 
       scale_y_continuous(labels = comma) +
       geom_text(aes(y = lab.ypos, label = n_Wallets), color = "blue", size = 6)
 
